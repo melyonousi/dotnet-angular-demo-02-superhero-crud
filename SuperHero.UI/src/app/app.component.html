@@ -1,0 +1,62 @@
+<app-container>
+  <div *ngIf="loading">heroes loading..</div>
+  <div *ngIf="error">
+    {{ error?.message }}
+  </div>
+  <div *ngIf="!error || !loading" ngClass="flex justify-end">
+    <button (click)="initNewHero()" ngClass="border border-slate-500 rounded w-fit px-2 py-0.5 hover:border-teal-600 hover:text-teal-600 transition-all duration-500 ease-in-out">Create New Hero</button>
+  </div>
+  <div *ngIf="heroes.length !== 0;else heroesNotFound">
+    <table ngClass="w-full mx-auto table-auto border-separate border-spacing-2 border border-slate-500">
+      <caption ngClass="caption-top font-bold pb-4 text-2xl" innerText="Heroes Table">
+      </caption>
+      <thead>
+        <tr>
+          <th ngClass="whitespace-nowrap text-start border border-slate-600 px-1.5 py-1">ID</th>
+          <th ngClass="whitespace-nowrap text-start border border-slate-600 px-1.5 py-1">Name</th>
+          <th ngClass="whitespace-nowrap text-start border border-slate-600 px-1.5 py-1">First Name</th>
+          <th ngClass="whitespace-nowrap text-start border border-slate-600 px-1.5 py-1">Last Name</th>
+          <th ngClass="whitespace-nowrap text-start border border-slate-600 px-1.5 py-1">Place</th>
+          <th ngClass="whitespace-nowrap text-center border border-slate-600 px-1.5 py-1">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hero of heroes; let e = even; let o = odd; let i = index" [ngClass]="[e ? 'even' : 'odd']">
+          <td ngClass="whitespace-nowrap border border-slate-700 px-1.5 py-1"><span [innerText]="hero.id"></span>
+          </td>
+          <td ngClass="whitespace-nowrap border border-slate-700 px-1.5 py-1"><span
+              [innerText]="hero.name | titlecase"></span>
+          </td>
+          <td
+            ngClass="whitespace-nowrap border border-slate-700 px-1.5 py-1 text-ellipsis overflow-x-hidden max-w-[180px]"
+            [title]="hero.firstName"><span [innerText]="hero.firstName"></span>
+          </td>
+
+
+          <td
+            ngClass="whitespace-nowrap border border-slate-700 px-1.5 py-1 text-ellipsis overflow-x-hidden max-w-[160px]"
+            [title]="hero.lastName"><span [innerText]="hero.lastName"></span>
+          </td>
+          <td
+            ngClass="whitespace-nowrap border border-slate-700 px-1.5 py-1 text-ellipsis overflow-x-hidden max-w-[160px]"
+            [title]="hero.place"><span [innerText]="hero.place"></span>
+          </td>
+          <td
+            ngClass="whitespace-nowrap text-center border border-slate-700 px-1.5 py-1 text-ellipsis overflow-x-hidden max-w-[160px]"
+            [title]="hero.name">
+            <button (click)="editHero(hero)" ngClass="bg-pink-500 px-2 py-1 rounded">Show</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
+  </div>
+  <ng-template #heroesNotFound>
+    <div>Heroes Not Found</div>
+  </ng-template>
+
+  <app-edit-hero [hero]="heroToEdit" (heroesUpdated)="updateSuperHeroesList($event)"></app-edit-hero>
+
+</app-container>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,29 @@
+<section ngClass="flex flex-col gap-2 bg-slate-950 px-4 py-4 max-w-xs mx-auto rounded" *ngIf="hero">
+    <div>
+        <input ngClass="px-2 py-1 rounded w-full" type="text" [(ngModel)]="hero.name" placeholder="Name" required>
+    </div>
+    <div>
+        <input ngClass="px-2 py-1 rounded w-full" type="text" [(ngModel)]="hero.firstName" placeholder="First Name"
+            required>
+    </div>
+    <div>
+        <input ngClass="px-2 py-1 rounded w-full" type="text" [(ngModel)]="hero.lastName" placeholder="Last Name"
+            required>
+    </div>
+    <div>
+        <input ngClass="px-2 py-1 rounded w-full" type="text" [(ngModel)]="hero.place" placeholder="Place" required>
+    </div>
+    <div ngClass="flex justify-between gap-2">
+        <div ngClass="flex gap-2">
+            <button ngClass="rounded px-2 py-0.5 bg-red-600" (click)="deleteHero(hero)" *ngIf="hero.id">Delete</button>
+            <button ngClass="rounded px-2 py-0.5 bg-teal-600" (click)="updateHero(hero)" *ngIf="hero.id">Save</button>
+            <button ngClass="rounded px-2 py-0.5 bg-sky-600" (click)="createHero(hero)" *ngIf="!hero.id">Create</button>
+        </div>
+        <div>
+            <button ngClass="rounded px-2 py-0.5 bg-slate-600" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+    <div *ngIf="error">
+        <p ngClass="text-red-500" [innerText]="error"></p>
+    </div>
+</section>
