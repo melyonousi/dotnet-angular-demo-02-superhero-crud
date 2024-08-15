@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lOAgwGQWzttxQjetB6i6cWfRQZPoFanNlSXOknhwyZAfOPI7P3WBatwoX5VmRLRsvyqDO1BFZhC1FVecbtpQlg==",
+  "dgSpecHash": "VXvStnBys5cikw2upNNjoTnBwyWVwDsvzjSaCgaTG6okSSyDPWjSD/XSWcHN0gdm+1GmBH8AuppLt9JSZxVWag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\melyo\\Documents\\github\\elyonousi\\dotnet-demo-02\\SuperHeroAPI\\SuperHeroAPI.csproj",
+  "projectFilePath": "C:\\Users\\melyo\\Documents\\github\\melyonousi\\dotnet-angular\\dot-net\\dotnet-angular-demo-02-superhero-crud\\SuperHeroAPI\\SuperHeroAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\melyo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\melyo\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
@@ -32,7 +32,11 @@
     "C:\\Users\\melyo\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\melyo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\melyo\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\melyo\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\melyo\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\melyo\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\melyo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\melyo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\melyo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
   ],
   "logs": []
 }
